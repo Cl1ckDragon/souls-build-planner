@@ -1,0 +1,40 @@
+spring:
+  application:
+    name: souls-build-planner
+
+  datasource:
+    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://localhost:5432/souls_planner}
+    username: ${DB_USERNAME:postgres}
+    password: ${DB_PASSWORD:postgres}
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+        default_schema: public
+
+app:
+  jwt:
+    secret: ${JWT_SECRET:change-me-in-production-must-be-at-least-256-bits-long-for-hmac-sha256}
+    expiration-ms: 86400000   # 24 hours
+
+server:
+  port: 8080
+
+springdoc:
+  api-docs:
+    path: /v3/api-docs
+  swagger-ui:
+    path: /swagger-ui.html
+    try-it-out-enabled: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info

@@ -1,0 +1,29 @@
+# Maven
+backend/target/
+backend/*.iml
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+# Node
+frontend/node_modules/
+frontend/dist/
+frontend/.env.local
+
+# Environment — never commit secrets
+.env
+*.pem
+*.key
+
+# IDE
+.idea/
+.vscode/
+*.class
+*.iml
+
+# Logs
+*.log
+logs/
+
+# OS
+.DS_Store
+Thumbs.db
