@@ -24,6 +24,12 @@ export default function Navbar() {
 
           {isAuthenticated ? (
             <>
+              <Link
+                to="/builds/new"
+                className="px-3 py-1 bg-souls-gold/20 border border-souls-gold/50 rounded text-souls-gold hover:bg-souls-gold/30 transition-colors"
+              >
+                + New Build
+              </Link>
               <span className="text-souls-ash">{username}</span>
               <button
                 onClick={handleLogout}

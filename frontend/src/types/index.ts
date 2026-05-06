@@ -54,6 +54,22 @@ export interface Build {
   createdAt: string;
 }
 
+export interface CreateBuildRequest {
+  gameId: number;
+  classId: number;
+  title: string;
+  description: string;
+  vigor: number;
+  mind: number;
+  endurance: number;
+  strength: number;
+  dexterity: number;
+  intelligence: number;
+  faith: number;
+  arcane: number;
+  isPublic: boolean;
+}
+
 export interface AuthResponse {
   token: string;
   username: string;
